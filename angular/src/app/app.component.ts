@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   recipies = [
     'Chili con carne',
@@ -16,9 +16,30 @@ export class AppComponent {
   ];
 
   randomRecipe: string;
+  loading = false;
+
+  private today: string;
+
+  ngOnInit() {
+    this.today = new Date().toDateString();
+    const alreadyGeneratedRecipe = localStorage.getItem(this.today);
+
+    if (!!alreadyGeneratedRecipe) {
+      this.randomRecipe = alreadyGeneratedRecipe;
+    }
+  }
 
   findRandom() {
-    this.randomRecipe = this.recipies[this.getRandomInt(0, this.recipies.length - 1)];
+    this.loading = true;
+
+    if (!this.randomRecipe) {
+      this.randomRecipe = this.recipies[this.getRandomInt(0, this.recipies.length - 1)];
+      localStorage.setItem(this.today, this.randomRecipe);
+    }
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
   }
 
   getRandomInt(min, max) {

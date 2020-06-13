@@ -1,6 +1,25 @@
 <div class="this">
+  <mat-card class="card">
 
-  <button (click)="findRandom()">Go</button>
-  <p>{{randomRecipe}}</p>
+    <mat-card-header>
+      <mat-card-title>Hvad skal vi spise til aften?</mat-card-title>
+      <mat-card-subtitle>Dinner Decider</mat-card-subtitle>
+    </mat-card-header>
 
+    <mat-card-content class="content" *ngIf="!loading">
+      <p *ngIf="!randomRecipe">
+        <button mat-button color="primary" (click)="findRandom()">Kom med et foreslag</button>
+      </p>
+      <p *ngIf="!!randomRecipe">
+        {{randomRecipe}}
+      </p>
+
+    </mat-card-content>
+    <mat-card-content class="content" *ngIf="loading">
+      <mat-spinner diameter="25"></mat-spinner>
+    </mat-card-content>
+
+  </mat-card>
+
+  <a href="https://github.com/bjornnorgaard/didecide" mat-button class="source-link-button">gå til sovsen</a>
 </div>
