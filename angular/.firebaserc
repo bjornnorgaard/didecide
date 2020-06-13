@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "didecide"
+  },
+  "targets": {
+    "didecide": {
+      "hosting": {
+        "angular": [
+          "didecide"
+        ]
+      }
+    }
+  }
+}
