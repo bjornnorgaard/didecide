@@ -16,6 +16,14 @@ export class AppComponent implements OnInit {
     'Svensk pølseret',
     'Hot dogs',
     'Burger',
+    'Pastasalat',
+    'Scramble eggs',
+    'Tortilla',
+    'Taco',
+    'Lasagne',
+    'Risret',
+    'Pølsemix',
+    'Wokret',
     'IT\'S NACHOS MOTHERFUCKER!',
   ];
 
