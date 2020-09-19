@@ -12,7 +12,11 @@ export class AppComponent implements OnInit {
     'Pizza',
     'Omelet',
     'Bønnesalat',
-    'Pasta med pesto'
+    'Pasta med pesto',
+    'Svensk pølseret',
+    'Hot dogs',
+    'Burger',
+    'IT\'S NACHOS MOTHERFUCKER!',
   ];
 
   randomRecipe: string;
