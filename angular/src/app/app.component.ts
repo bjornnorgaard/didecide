@@ -27,6 +27,8 @@ export class AppComponent implements OnInit {
     'Svensk pølseret',
     'Hot dogs',
     'Burger',
+    'Grønne ærter',
+    'Camilla siger det skal være tacos',
     'IT\'S NACHOS MOTHERFUCKER!',
   ];
 
