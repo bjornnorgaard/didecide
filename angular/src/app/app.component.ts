@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   recipies = [
-    'Chili con carne',
-    'Pizza',
-    'Scramled eggs',
-    'Pommes ala Nugget',
+	'Chili con carne',
+	'Pizza',
+	'Scramled eggs',
+	'Pommes ala Nugget',
 	'Pasta med kødsovs',
 	'Risret',
 	'Kyllingedeller',
 	'Taco eller wraps',
-    'Salat',
+	'Salat',
 	'Brasede kartofler',
 	'Tarteletter',
 	'Lasagne',
@@ -24,10 +24,10 @@ export class AppComponent implements OnInit {
 	'Wok',
 	'Kødtærte',
 	'Pølse, kebab eller kyllingemix',
-    'Svensk pølseret',
-    'Hot dogs',
-    'Burger',
-    'IT\'S NACHOS MOTHERFUCKER!',
+	'Svensk pølseret',
+	'Hot dogs',
+	'Burger',
+	'IT\'S NACHOS MOTHERFUCKER!',
   ];
 
   randomRecipe: string;
